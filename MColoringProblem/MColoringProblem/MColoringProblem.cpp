@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<vector<int>> W;
+vector<vector<bool>> W;
 vector<int> vcolor;
 int n, m, cnt;
 
@@ -16,7 +16,7 @@ int main() {
 	scanf("%d", &n);
 	printf("Input number of color : ");
 	scanf("%d", &m);
-	W = vector<vector<int>>(n + 1, vector<int>(n + 1, 0));
+	W = vector<vector<bool>>(n + 1, vector<bool>(n + 1, false));
 	vcolor = vector<int>(n + 1, 0);
 	printf("If there is an edge on the graph, write down two vertices.\n");
 	printf("Input : two vertices ( finish Input : 0 0 )\n");
@@ -26,12 +26,12 @@ int main() {
 		scanf("%d%d", &v1, &v2);
 		if (v1 == 0)
 			break;
-		W[v1][v2] = 1; W[v2][v1] = 1;
+		W[v1][v2] = true; W[v2][v1] = true;
 	}
 	cnt = 1;
 	printf("\n< %d-coloring number of cases >\n\n", m);
 	m_coloring(0);
-
+	printf("\n");
 	return 0;
 }
 

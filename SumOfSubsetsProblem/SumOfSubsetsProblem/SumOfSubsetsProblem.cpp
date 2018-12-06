@@ -11,7 +11,7 @@ int W;
 void sum_of_subsets(int i, int weight, int total);
 bool promising(int i, int weight, int total);
 
-int main() {
+int main() { 
 	int n, total = 0;
 	printf("Input number of Item : ");
 	scanf("%d",&n);

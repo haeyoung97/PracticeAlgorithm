@@ -29,7 +29,7 @@ int main() {
 	vindex[0] = 1;
 	printf("\n< Hamiltonian Circuits >\n\n");
 	hamiltonian(0);
-
+	printf("\n");
 	return 0;
 }
 
@@ -37,9 +37,9 @@ void hamiltonian(int i) {
 	int j;
 	if (promising(i)) {
 		if (i == n - 1) {
-			printf(" <%d> 1  ", cnt);
+			printf(" <%d> 1 -> ", cnt);
 			for (int k = 1; k <= n - 1; k++)
-				printf("%d  ", vindex[k]);
+				printf("%d -> ", vindex[k]);
 			printf("1 \n");
 			cnt++;
 		}
